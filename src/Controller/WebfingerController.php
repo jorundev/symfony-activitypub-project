@@ -70,9 +70,11 @@ class WebfingerController extends AbstractController
 			'subject' => $subject,
 			'aliases' => array($profile_link),
 			'links' => array(
-				'rel' => 'self',
-				'type' => 'application/activity+json',
-				'href' => $profile_link,
+				array(
+					'rel' => 'self',
+					'type' => 'application/activity+json',
+					'href' => $profile_link,
+				)
 			)
 		));
 	}
